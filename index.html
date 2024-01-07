@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Mi Librería</title>
+</head>
+<body>
+    <header>
+        <h1>Libreria laia</h1>
+      </header>
+
+      <main>
+
+        <!-- filtros  -->
+        
+        <div id="filters">
+            <label for="autorFilter">Filtrar por Autor:</label>
+            <input type="text" id="autorFilter" oninput="filterTable()" placeholder="Escribe el autor">
+          
+            <label for="precioFilter">Filtrar por Precio:</label>
+            <input type="number" id="precioFilter" oninput="filterTable()" placeholder="Escribe el precio">
+          
+            <label for="estadoFilter">Filtrar por Estado:</label>
+            <select id="estadoFilter" onchange="filterTable()">
+              <option value="">Todos</option>
+              <option value="En Venta">En Venta</option>
+              <option value="Reservado">Reservado</option>
+              <option value="Vendido">Vendido</option>
+            </select>
+          </div>
+
+
+  <table id="librosTabla" contenteditable="true">
+    <thead>
+      <tr>
+        <th>Nombre del Libro</th>
+        <th>Autor</th>
+        <th>Precio</th>
+        <th>Foto</th>
+        <th>Estado</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Puedes agregar filas aquí directamente si lo deseas -->
+ <!-- Nueva fila para el libro "Matilda" -->
+ <tr>
+    <td>Veus d'ocells</td>
+    <td>Celdoni Fonoll</td>
+    <td>7€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5u/__/c10420p971091081/i4692970920.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/veus-docells-celdoni-fonoll-971091081', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+  <!-- Puedes agregar más filas aquí si lo deseas -->
+
+  <tr>
+    <td>Cartas de Dicodemo</td>
+    <td>Drobaczydnski</td>
+    <td>15€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5i/__/c10420p971075418/i4692906051.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/cartas-de-dicodemo-dobraczydnski-971075418', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>El fuego</td>
+    <td>Katherine Neville</td>
+    <td>5€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5n/__/c10420p971081598/i4692931429.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/el-fuego-katherine-neville-971081598', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Mecanoscrit del segon origen </td>
+    <td>Manuel de Pedrolo</td>
+    <td>5€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5s/__/c10420p971088321/i4692959572.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/mecanoscrit-del-segon-origen-manuel-de-pedrolo-971088321', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>No demanis llobarro de temporada </td>
+    <td>Andreu Martín | Jaume Ribera</td>
+    <td>4€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5t/__/c10420p971089011/i4692962472.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/no-demanis-llobarro-fora-de-temporada-971089011', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>Partitura  </td>
+    <td>Anna Casanovas</td>
+    <td>5€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5t/__/c10420p971089850/i4693858104.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/partitura-anna-casanovas-971089850', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>Te deix,amor, la mar com a penyora  </td>
+    <td>Carmen Riera</td>
+    <td>4€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5u/__/c10420p971090602/i4693856432.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+  
+    <td><button onclick="window.open('https://es.wallapop.com/item/te-deix-amor-la-mar-com-a-penyora-carme-riera-971090602', '_blank')">Ir a Wallapop</button></td>
+</tr>
+
+
+
+  <tr>
+    <td>Crònica de demà  </td>
+    <td>Miquel Marti Pol</td>
+    <td>15€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5l/__/c10420p971078868/i4692920182.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/cronica-de-dema-27poemes-en-tres-temps-m-m-i-pol-971078868', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Saga Millenium V 4 | 5  </td>
+    <td>Stieg Larsson</td>
+    <td>6€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5x/__/c10420p971094758/i4692986626.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/el-que-no-et-mata-et-fa-mes-fort-lhome-que-971094758', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>El faraón del desierto & El faraón negro  </td>
+    <td>Christian Jacq</td>
+    <td>7€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5w/__/c10420p971092859/i4692978921.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/el-faraon-del-desierto-el-faraon-negro-971092859', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td> The fantastic book of board games  </td>
+    <td>Jez Alborough</td>
+    <td>25€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/60/__/c10420p971098941/i4693002998.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/the-fantastic-book-of-board-games-jez-alborough-971098941', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td> Libro de juegos antiguos  </td>
+    <td>Varios</td>
+    <td>12€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/64/__/c10420p971103455/i4693788693.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/libro-de-juegos-971103455', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td> Historia de Catalunya | ultima carta a Companys  </td>
+    <td>Toni Soler </td>
+    <td>8€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/65/__/c10420p971105584/i4693791766.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/lultima-carta-de-companys-historia-de-catalunya-971105584', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td> Inteligencia Emocional </td>
+    <td>Daniel Goleman </td>
+    <td>8€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/68/__/c10420p971109087/i4693043473.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/inteligencia-emocional-daniel-goleman-971109087', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td> Mano a mano nº6  </td>
+    <td>Font Gimenez </td>
+    <td>10€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/8g/__/c10420p971212841/i4693601323.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/mano-a-mano-font-gimenez-num-6-971212841', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Humor del pueblo combatiente  </td>
+    <td>René de la Nuez </td>
+    <td>40€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/8i/__/c10420p971215632/i4693612378.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/humor-de-pueblo-combatiente-rene-de-la-nuez-971215632', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Como ganar amigos e influir sobre las personas </td>
+    <td>Dale Carnegie </td>
+    <td>8€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/66/__/c10420p971106857/i4693034524.jpg?pictureSize=W640" alt="coverBook"></td>    <td>Reservado</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/como-ganar-amigos-e-influir-sobre-las-personas-971106857', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>Tequila Bang</td>
+    <td>Victor Mora y Alonso Font </td>
+    <td>5€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/8n/__/c10420p971221574/i4693636577.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/tequila-bang-victor-mora-y-alfonso-font-971221574', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+  <tr>
+    <td>Hom </td>
+    <td>Carlos Giménez</td>
+    <td>12€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/8m/__/c10420p971220628/i4693632608.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/hom-carlos-gimenez-971220628', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td> Principe Valiente</td>
+    <td> Harold R Foster | Bob Fujitani</td>
+    <td>300€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/8e/__/c10420p971210587/i4693592717.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/principe-valiente-completa-971210587', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+  <tr>
+    <td>Blueberry - Faltan 3 últimos</td>
+    <td>Charlier Giraud</td>
+    <td>140€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/6g/__/c10420p971118920/i4693083645.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/blueberry-corteggiani-blanc-dumont-971118920', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Flash Gordon - completa</td>
+    <td>Varios</td>
+    <td>140€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/69/__/c10420p971110877/i4693050579.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/flash-gordon-completa-971110877', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+  <tr>
+    <td>Catalunya, nació sotmesa</td>
+    <td>Fèlix Cucurull</td>
+    <td>4€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/63/__/c10420p971103056/i4693019062.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/catalunya-nacio-sotmesa-felix-cucurull-971103056', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+  <tr>
+    <td>Inéditos del Quijote</td>
+    <td>M. Angeles Centenero</td>
+    <td>12€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5p/__/c10420p971084603/i4692944050.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/ineditos-del-quijote-m-angeles-centenero-971084603', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+  <tr>
+    <td>La reina cristina de Suecia</td>
+    <td>Dario Fo</td>
+    <td>6€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5r/__/c10420p971086585/i4692952203.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/la-reina-cristina-de-suecia-dario-fo-971086585', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+
+  <tr>
+    <td>La llavor immortal</td>
+    <td>Jordi Balló | Xavier Pérez</td>
+    <td>12€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5q/__/c10420p971085589/i4692948250.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/la-llavor-immortal-jordi-ballo-xavier-perez-971085589', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+
+  <tr>
+    <td>Hazell y el bromista peligroso</td>
+    <td>Terry Venables</td>
+    <td>4€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5o/__/c10420p971083676/i4692940268.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/hazell-y-el-bromista-peligroso-venables-williams-971083676', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>El nuevo alemán sin esfuerzo - Metodo Assimil</td>
+    <td>Varios</td>
+    <td>25€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5o/__/c10420p971082621/i4692935564.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/el-nuevo-aleman-sin-esfuerzo-metodo-assimil-971082621', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+  <td>El amor en tiempos del cólera</td>
+  <td>Gabriel Garcia Márquez</td>
+  <td>5€</td>
+  <td><img src="https://cdn.wallapop.com/images/10420/g2/5m/__/c10420p971080539/i4692926977.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+  <td><button onclick="window.open('https://es.wallapop.com/item/el-amor-en-los-tiempos-del-colera-g-g-marquez-971080539', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+<tr>
+    <td>Almanac de la dona</td>
+    <td>Mireia Bofill | Maria Lluïsa Penelas</td>
+    <td>10€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5a/__/c10420p971065425/i4692886971.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/almanac-de-la-dona-mireia-bofill-i-maria-lluisa-971065425', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Bésame Tonto</td>
+    <td>Patrizia Carrano</td>
+    <td>4€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5d/__/c10420p971068583/i4692877399.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/besame-tonto-patrizia-carrano-971068583', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+  <tr>
+    <td>The Big Bang Theory.1600 preguntas sobre tu serie</td>
+    <td>Adam Faberman</td>
+    <td>10€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/5e/__/c10420p971069949/i4692883072.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/the-big-bang-theory-1600-preguntas-sobre-tu-serie-971069949', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+
+  <tr>
+    <td>Asuntos del corazón </td>
+    <td>Danielle Steel</td>
+    <td>4€</td>
+    <td><img src="https://cdn.wallapop.com/images/10420/g2/57/__/c10420p971061549/i4692848271.jpg?pictureSize=W640" alt="coverBook"></td>    <td>En Venta</td>
+    <td><button onclick="window.open('https://es.wallapop.com/item/asuntos-del-corazon-danielle-steel-971061549', '_blank')">Ir a Wallapop</button></td>
+
+</tr>
+
+    </tbody>
+  </table>
+</main>
+<footer></footer>
+
+
+
+
+  <script src="script.js"></script>
+  <script src="filtro.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: url('https://images.pexels.com/photos/3995842/pexels-photo-3995842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
+    height: 300px;
+    position: relative;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  header h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-family: 'Arial Black', sans-serif;
+    text-transform: uppercase;
+  }
+  main {
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+  
+  
+
+  table {
+    width: 80%; /* Puedes ajustar este porcentaje según tus preferencias */
+    margin: 20px auto; /* Centrar la tabla en la página */
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  
+  th {
+    background-color:  #896f4f;
+    color: white;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  td img {
+    max-width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+
+/* filtros */
+
+#filters{
+  text-align: center;
+} 
+
+#filters label,
+#filters input,
+#filters select {
+  margin-bottom: 10px; /* Espaciado entre elementos */
+  font-size: 18px; /* Tamaño del texto */
+  /* Otros estilos que desees aplicar */
+}
+
+#filters select {
+  padding: 5px; /* Ajuste de espacio interno para selects */
+}
+
+/* Tu estilo actual */
+
+footer {
+  text-align: center;
+  padding: 50px;
+  background-color: #896f4f;
+  color: white; /* Puedes cambiar el color del texto si lo necesitas */
+}
+
+
+
+  @media screen and (max-width: 600px) {
+    th, td {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      padding: 8px; /* Ajusta el espaciado para una mejor apariencia en móviles */
+    }
+  
+    td img {
+      max-width: 80%; /* Ajusta el tamaño máximo de las imágenes según tu preferencia */
+      height: auto; /* Hace que la altura se ajuste automáticamente para mantener la proporción */
+      display: block;
+      margin: 10px auto; /* Centra las imágenes */
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    button {
+      width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+      margin: 10px auto; /* Centra el botón */
+    }
+  }
+  
