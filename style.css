@@ -131,3 +131,13 @@ footer {
     }
   }
   
+  /* Estilos para la línea que muestra la suma de los precios de los libros vendidos */
+
+  #sumaPreciosVendidos {
+    margin-top: 10px; /* Espacio superior */
+    padding: 10px; /* Relleno interno */
+    background-color: #f2f2f2; /* Color de fondo */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center;
+}
